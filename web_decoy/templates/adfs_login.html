@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ADFS Sign-in</title>
+    <style>
+        body { font-family: sans-serif; }
+        .login-container { width: 300px; margin: 100px auto; border: 1px solid #ccc; padding: 20px; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 10px; margin-bottom: 10px; }
+        button { width: 100%; padding: 10px; background-color: #0078d4; color: white; border: none; }
+        .img-container {text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="img-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Active_Directory_Federation_Services_Logo.svg/1200px-Active_Directory_Federation_Services_Logo.svg.png" alt="ADFS Logo" width="150">
+        </div>
+        <h2>Sign in with your organizational account</h2>
+        {% if message %}
+            <p style="color: red;">{{ message }}</p>
+        {% endif %}
+        <form method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Sign in</button>
+        </form>
+    </div>
+</body>
+</html>
