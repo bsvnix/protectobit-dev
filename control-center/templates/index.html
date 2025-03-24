@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protectobit Control Center</title>
+</head>
+<body>
+    <h1>Protectobit Control Center</h1>
+    <h2>Web Decoy Connections</h2>
+    <ul>
+        {% for connection in connections %}
+            <li>IP: {{ connection.ip }}, Destination: {{ connection.destination }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
